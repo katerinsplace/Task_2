@@ -21,6 +21,6 @@ def user_data(delete_user):
     token = response.json().get("accessToken")
     if token:
         delete_user.append(token)
-    yield (data, {'Authorization': token})
+    return (data, {'Authorization': token})
     
             
